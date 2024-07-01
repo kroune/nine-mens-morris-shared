@@ -1,5 +1,6 @@
 package com.kroune
 
+import com.kr8ne.mensMorris.Position
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
@@ -32,4 +33,8 @@ sealed class GameSignals(val serverMessage: String) {
     class Move(val message: String) : GameSignals(message)
     @Serializable
     class GameEnd(val message: String) : GameSignals(message)
+    @Serializable
+    class MoveTurn(val boolean: Boolean): GameSignals("this is move turn class, no message available")
+    @Serializable
+    class PositionInfo(val pos: Position) : GameSignals("this is pos info class, no message available")
 }

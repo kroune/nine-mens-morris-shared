@@ -7,16 +7,13 @@ plugins {
 group = "com.kroune"
 version = "1.0-SNAPSHOT"
 
-repositories {
-    mavenCentral()
-}
-
 kotlin {
     jvmToolchain(8)
 }
 
 dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
+    implementation("com.github.kroune:9-men-s-morris-lib:297220e0e1")
 }
 
 publishing {
