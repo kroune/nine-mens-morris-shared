@@ -25,3 +25,8 @@ class GameResponse(
         return Json.encodeToString<GameResponse>(this@GameResponse)
     }
 }
+
+sealed class GameSignals(message: String) {
+    class Move(message: String) : GameSignals(message)
+    class GameEnd(message: String) : GameSignals(message)
+}
