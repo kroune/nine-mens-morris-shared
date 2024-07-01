@@ -26,7 +26,10 @@ class GameResponse(
     }
 }
 
-sealed class GameSignals(message: String) {
-    class Move(message: String) : GameSignals(message)
-    class GameEnd(message: String) : GameSignals(message)
+@Serializable
+sealed class GameSignals(val serverMessage: String) {
+    @Serializable
+    class Move(val message: String) : GameSignals(message)
+    @Serializable
+    class GameEnd(val message: String) : GameSignals(message)
 }
