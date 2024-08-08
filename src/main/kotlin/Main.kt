@@ -27,10 +27,8 @@ class GameResponse(
     }
 }
 
-@Serializable
-sealed class GameSignals(val serverMessage: String) {
-    @Serializable
-    class Move(val message: String) : GameSignals(message)
-    @Serializable
-    class GameEnd(val message: String) : GameSignals(message)
+sealed class GameEndReason(val isFirstUser: Boolean) {
+    class UserGaveUp(isFirstUserWon: Boolean) : GameEndReason(isFirstUserWon)
+    class UserWasTooSlow(isFirstUserWon: Boolean) : GameEndReason(isFirstUserWon)
+    class Normal(isFirstUserWon: Boolean) : GameEndReason(isFirstUserWon)
 }
