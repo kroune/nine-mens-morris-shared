@@ -17,5 +17,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MensMorrisShared"
+rootProject.name = "nine-mens-morris-shared"
 

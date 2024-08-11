@@ -1,10 +1,8 @@
-package com.kroune
+package com.kroune.nineMensMorrisShared
 
-import com.kr8ne.mensMorris.Position
+import kotlinx.serialization.json.Json
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.Json
-import java.util.*
 
 @Deprecated("it will be replaced with purpose specific classes")
 @Serializable
