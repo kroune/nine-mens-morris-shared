@@ -13,7 +13,6 @@ kotlin {
 
 dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
-    implementation("com.github.kroune:9-men-s-morris-lib:297220e0e1")
 }
 
 publishing {
